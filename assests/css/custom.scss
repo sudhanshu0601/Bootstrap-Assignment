@@ -1,0 +1,23 @@
+$primary_1: #070D1A;
+$primary_2: #009cea;
+$primary_3: #F2F8FE;
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.my-navbar{
+  background-color: #191c1f;
+  color: #ffffff;
+}
+
+nav{
+    div{
+        h1{
+            color: $primary_3;
+            text-decoration: none;
+            &:hover{
+                color: $primary_3;
+            }
+        }
+    }
+}
