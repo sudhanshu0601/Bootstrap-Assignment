@@ -1,23 +1,62 @@
-$primary_1: #070D1A;
+$primary_1: #070d1a;
 $primary_2: #009cea;
-$primary_3: #F2F8FE;
-
+$primary_3: #f2f8fe;
+$heading-font: "abel", sans-serif;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-.my-navbar{
-  background-color: #191c1f;
-  color: #ffffff;
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: $primary_1;
+  color: $primary_3;
 }
 
-nav{
-    div{
-        h1{
-            color: $primary_3;
-            text-decoration: none;
-            &:hover{
-                color: $primary_3;
-            }
-        }
-    }
+.my-navbar {
+  background-color: $primary_1;
+  color: $primary_3;
+  font-family: $heading-font;
+  font-size: 30px;
+}
+
+.my-container {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.my-logo {
+  color: $primary_3;
+  text-decoration: none;
+  font-family: abel, sans-serif;
+  font-size: 30px;
+  &:hover {
+    color: $primary_3;
+  }
+}
+
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #151D2B;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
+  z-index: 1050;
+}
+
+.sidebar.show {
+  right: 0;
+}
+
+.nav-link {
+  padding: 10px 0;
+  font-weight: 500;
 }

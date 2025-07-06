@@ -8,27 +8,50 @@
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="assests/css/custom.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav class="navbar my-navbar">
-      <div class="container">
-        <h1>VISIBLE</h1>
-        <button
-          class="navbar-toggler navbar-dark"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <header class="my-header">
+      <div class="my-container">
+        <h1 class="my-logo">VISIBLE</h1>
+        <nav class="navbar my-navbar">
+          
+          <span id="menuToggle"><i class="bi bi-list"></i></span>
+          <div id="sidebarMenu" class="sidebar">
+            <button
+              id="closeMenu"
+              class="btn-close mt-3 me-3 ms-auto d-block"
+              aria-label="Close"
+            ></button>
+            <ul class="list-unstyled p-4">
+              <li><a href="#" class="nav-link">Home</a></li>
+              <li><a href="#" class="nav-link">About</a></li>
+              <li><a href="#" class="nav-link">Services</a></li>
+              <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
-    </nav>
-    <main></main>
+    </header>
+
+    <main>
+      <h1>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
+        distinctio fugiat, animi id provident veritatis, exercitationem iure
+        suscipit pariatur tempora, odit totam. Nesciunt animi quos sit odio
+        quisquam. Illo, obcaecati!
+      </h1>
+    </main>
     <header></header>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assests/js/main.js"></script>
   </body>
 </html>
