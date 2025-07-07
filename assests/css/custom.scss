@@ -1,6 +1,7 @@
 $primary_1: #070d1a;
 $primary_2: #009cea;
 $primary_3: #f2f8fe;
+$primary_4: #111623;
 $heading-font: "Abel", sans-serif;
 $nav-backgraound: rgba(22, 29, 44, 0.95);
 $nav-font: mukta, sans-serif;
@@ -221,37 +222,37 @@ a {
     }
 
     .experience__badge {
-        position: absolute;
-        bottom: 30px;
-        left: 30px;
-        background-color: color-mix(in srgb, $surface-color 60%, transparent 40%);
-        backdrop-filter: blur(10px);
-        border-radius: 10px;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        border-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        min-width: 140px;
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      background-color: color-mix(in srgb, $surface-color 60%, transparent 40%);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      min-width: 140px;
 
-        .years{
-          font-size: 2.2rem;
-          font-weight: 800;
-          color: $accent-color;
-          line-height: 1;
-        }
-
-        .text{
-          font-size: 0.85rem;
-          color: $primary_3;
-          font-weight: 500;
-        }
+      .years {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: $accent-color;
+        line-height: 1;
       }
+
+      .text {
+        font-size: 0.85rem;
+        color: $primary_3;
+        font-weight: 500;
+      }
+    }
   }
 
-  .clientCounter{
+  .clientCounter {
     position: absolute;
     top: 30px;
-    right:-30px;
+    right: -30px;
     background-color: $surface-color;
     border-radius: 10px;
     padding: 1.25rem;
@@ -261,18 +262,189 @@ a {
     align-items: flex-start;
     min-width: 160px;
 
-    &__number{
-      span{
+    &__number {
+      span {
         font-size: 2rem;
         font-weight: 800;
         color: $headings-color;
       }
     }
 
-    &__text{
-      span{
+    &__text {
+      span {
         font-size: 0.85rem;
         color: $primary_3;
+      }
+    }
+  }
+}
+
+.about {
+  background-color: $primary_4;
+  padding: 60px 0;
+  overflow: clip;
+
+  &__title {
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    &__bg {
+      position: absolute;
+      top: 4px;
+      color: mix($primary_3, transparent, 5%);
+      left: 0;
+      right: 0;
+      z-index: 1;
+      font-weight: 700;
+      font-size: 52px;
+      line-height: 1;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding-bottom: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    p {
+      margin-bottom: 0;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &__image__wrapper {
+    position: relative;
+    margin-bottom: 3rem;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .about__mission {
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 90%;
+      background-color: $accent-color;
+      padding: 1.5rem;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 1.25em;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+      &__icon {
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: color-mix(in srgb, #ffffff 15%, transparent 85%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          font-size: 1.75rem;
+          color: #ffffff;
+        }
+      }
+
+      &__content {
+        h4 {
+          font-size: 1.25rem;
+          margin-bottom: 0.5rem;
+          color: $primary_3;
+          font-weight: 600;
+        }
+
+        p {
+          font-size: 0.95rem;
+          color: $primary_3;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &__content {
+    &__badge {
+      display: inline-block;
+      background-color: color-mix(in srgb, $accent-color 15%, transparent 85%);
+      color: $accent-color;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    h2{
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    &__info{
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 1.7;
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__valuesTitle{
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 2rem;
+    }
+
+    &__valuesList{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    &valueItem{
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background-color: color-mix(in srgb, #111623 95%, #e4edf5 5%);
+      padding: 0.75rem 1.25rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+
+      span{
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+    }
+
+    &__valueIcon{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $accent-color;
+
+      i{
+        color: #ffffff;
+        font-size: 14px;
+
       }
     }
   }

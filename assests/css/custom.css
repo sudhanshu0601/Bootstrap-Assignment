@@ -10973,7 +10973,7 @@ a {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  border-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   min-width: 140px;
 }
 .home__img__wrapper .experience__badge .years {
@@ -11007,4 +11007,151 @@ a {
 .home .clientCounter__text span {
   font-size: 0.85rem;
   color: #f2f8fe;
+}
+
+.about {
+  background-color: #111623;
+  padding: 60px 0;
+  overflow: clip;
+}
+.about__title {
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.about__title__bg {
+  position: absolute;
+  top: 4px;
+  color: rgba(242, 248, 254, 0.05);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1;
+}
+.about__title h2, .about__title .h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+.about__title p {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+.about__image__wrapper {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.about__image__wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.about__image__wrapper .about__mission {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90%;
+  background-color: #10a3d7;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1.25em;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.about__image__wrapper .about__mission__icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, #ffffff 15%, transparent 85%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about__image__wrapper .about__mission__icon i {
+  font-size: 1.75rem;
+  color: #ffffff;
+}
+.about__image__wrapper .about__mission__content h4, .about__image__wrapper .about__mission__content .h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #f2f8fe;
+  font-weight: 600;
+}
+.about__image__wrapper .about__mission__content p {
+  font-size: 0.95rem;
+  color: #f2f8fe;
+  margin-bottom: 0;
+}
+.about__content__badge {
+  display: inline-block;
+  background-color: color-mix(in srgb, #10a3d7 15%, transparent 85%);
+  color: #10a3d7;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.about__content h2, .about__content .h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+.about__content__info {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.about__content__info p:last-child {
+  margin-bottom: 0;
+}
+.about__content__valuesTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2rem;
+}
+.about__content__valuesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.about__contentvalueItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: color-mix(in srgb, #111623 95%, #e4edf5 5%);
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.about__contentvalueItem span {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+.about__content__valueIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #10a3d7;
+}
+.about__content__valueIcon i {
+  color: #ffffff;
+  font-size: 14px;
 }/*# sourceMappingURL=custom.css.map */
