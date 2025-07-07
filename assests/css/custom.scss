@@ -1,7 +1,10 @@
 $primary_1: #070d1a;
 $primary_2: #009cea;
 $primary_3: #f2f8fe;
-$heading-font: "abel", sans-serif;
+$heading-font: "Abel", sans-serif;
+$nav-backgraound: rgba(22, 29, 44, 0.95);
+$nav-font: mukta, sans-serif;
+$accent-color: #10a3d7;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -11,52 +14,197 @@ body {
   color: $primary_3;
 }
 
-.my-navbar {
-  background-color: $primary_1;
+a {
+  text-decoration: none;
   color: $primary_3;
-  font-family: $heading-font;
-  font-size: 30px;
 }
 
-.my-container {
+.my__header {
   display: flex;
-  flex-wrap: inherit;
+  align-items: center;
+  position: relative;
+  padding: 15px;
+}
+
+.my__container {
+  position: relative;
+  display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.my__navbar {
+  background-color: $nav-backgraound;
+  color: $primary_3;
+  font-family: $heading-font;
+  font-size: 17px;
+  font-family: $nav-font;
+  width: 300px;
+  z-index: 997;
+  top: 0;
+  bottom: 0;
+  right: -300px;
+  position: fixed;
+  transition: 0.3s ease-in-out;
+  ul {
+    display: block;
+    list-style: none;
+    padding: 20px 10px;
+    li {
+      list-style: none;
+      padding: 15px 20px;
+      font-weight: 500;
+      a {
+        color: $primary_3;
+        text-decoration: none;
+        &:hover {
+          color: $primary_3;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.my__navbar.show {
+  right: 0;
+}
+
+.my__container {
   width: 100%;
   margin: auto;
   padding: 0 1rem;
 }
 
-.my-logo {
+.my__logo {
   color: $primary_3;
   text-decoration: none;
   font-family: abel, sans-serif;
   font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
   &:hover {
     color: $primary_3;
+    cursor: pointer;
   }
 }
 
-
-
-.sidebar {
+.my__toggle {
   position: fixed;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
-  background-color: #151D2B;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-  transition: right 0.3s ease-in-out;
-  z-index: 1050;
+  right: 10px;
+  top: 20px;
+  font-size: 36px;
+  transition: 0.3s ease-in-out;
 }
 
-.sidebar.show {
-  right: 0;
+.my__toggle.show {
+  right: 310px;
 }
 
-.nav-link {
-  padding: 10px 0;
-  font-weight: 500;
+.home {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+
+  .container {
+    position: relative;
+  }
+
+  &__subtitle {
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+
+    span {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      padding-bottom: 3px;
+      position: relative;
+    }
+  }
+
+  &__title {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    letter-spacing: -1px;
+    font-family: $heading-font;
+    margin-top: 0;
+  }
+
+  &__description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1.25rem;
+
+    .primary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $accent-color;
+      color: $primary_3;
+      padding: 1rem 2rem;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+
+      i {
+        margin-left: 8px;
+        font-size: 0.85rem;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    .secondary-btn {
+      @extend .primary-btn;
+      background-color: $primary_1;
+      border: 1px solid $primary_3;
+    }
+  }
+
+  &__img__wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 0 20px;
+
+    .home__image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .floating__element {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: #131825;
+      .top__left {
+        top: -20px;
+        left: -20px;
+        animation-delay: 0.5s;
+      }
+    }
+  }
 }

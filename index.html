@@ -19,36 +19,99 @@
     />
   </head>
   <body>
-    <header class="my-header">
-      <div class="my-container">
-        <h1 class="my-logo">VISIBLE</h1>
-        <nav class="navbar my-navbar">
-          
-          <span id="menuToggle"><i class="bi bi-list"></i></span>
-          <div id="sidebarMenu" class="sidebar">
-            <button
-              id="closeMenu"
-              class="btn-close mt-3 me-3 ms-auto d-block"
-              aria-label="Close"
-            ></button>
-            <ul class="list-unstyled p-4">
-              <li><a href="#" class="nav-link">Home</a></li>
-              <li><a href="#" class="nav-link">About</a></li>
-              <li><a href="#" class="nav-link">Services</a></li>
-              <li><a href="#" class="nav-link">Contact</a></li>
-            </ul>
-          </div>
+    <header id="header" class="my__header">
+      <div class="container-fluid my__container">
+        <a class="my__logo">VISIBLE</a>
+        <nav class="navmenu my__navbar">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Team</a></li>
+            <li class="dropdown">
+              <a href=""><span>Dropdown</span> <i></i></a>
+              <ul class="dropdown-active">
+                <li><a href="">Dropdown 1</a></li>
+                <li class="dropdown">
+                  <a href=""><span>Deep Dropdown</span> <i></i></a>
+                  <ul>
+                    <li><a href="">Deep Dropdown 1</a></li>
+                    <li><a href="">Deep Dropdown 2</a></li>
+                    <li><a href="">Deep Dropdown 3</a></li>
+                    <li><a href="">Deep Dropdown 4</a></li>
+                  </ul>
+                </li>
+                <li><a href="">Dropdown 2</a></li>
+                <li><a href="">Dropdown 3</a></li>
+                <li><a href="">Dropdown 4</a></li>
+              </ul>
+            </li>
+            <li><a href="">Contact</a></li>
+          </ul>
+          <i class="my__toggle bi bi-list"></i>
         </nav>
       </div>
     </header>
 
-    <main>
-      <h1>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat
-        distinctio fugiat, animi id provident veritatis, exercitationem iure
-        suscipit pariatur tempora, odit totam. Nesciunt animi quos sit odio
-        quisquam. Illo, obcaecati!
-      </h1>
+    <main class="main">
+      <section class="home">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="home__subtitle">
+                <span>DESIGN STUDIO</span>
+              </div>
+
+              <h1 class="home__title">
+                INSPIRE <span class="highlight">THROUGN</span> DESIGN
+              </h1>
+
+              <div class="home__description">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam vitae fermentum risus. Vestibulum ante ipsum primis in
+                  faucibus orci luctus et ultrices posuere cubilia curae; Proin
+                  egestas, urna at rhoncus gravida.
+                </p>
+              </div>
+              <div class="home__buttons">
+                <a href="" class="primary-btn"
+                  >Our Services <i class="bi bi-chevron-right"></i
+                ></a>
+                <a href="" class="secondary-btn">View Portfolio</a>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="home__img__wrapper">
+                <img
+                  src="assests/img/home/home1.webp"
+                  class="home__image"
+                  alt=""
+                />
+                <div class="floating__element top__left">
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="floating__element bottom__right">
+                  <i class="bi bi-circle-fill"></i>
+                </div>
+                <div class="experience__badge">
+                  <span class="years">10+</span>
+                  <span class="text">Years of Experience</span>
+                </div>
+              </div>
+              <div class="clientCounter">
+                <div class="clientCounter__number">
+                  <span>750+</span>
+
+                </div>
+                <div class="clientCounter__text">
+                  <span>Happy Clients</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <header></header>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
