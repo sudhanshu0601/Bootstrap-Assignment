@@ -10893,6 +10893,11 @@ a {
   font-family: "Abel", sans-serif;
   margin-top: 0;
 }
+.home__title__highlight {
+  color: #10a3d7;
+  position: relative;
+  display: inline-block;
+}
 .home__description {
   font-size: 1.05rem;
   line-height: 1.7;
@@ -10930,6 +10935,12 @@ a {
   max-width: 600px;
   margin: auto;
   padding: 0 20px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+  transition: transform 0.5s ease;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 .home__img__wrapper .home__image {
   width: 100%;
@@ -10950,4 +10961,50 @@ a {
   top: -20px;
   left: -20px;
   animation-delay: 0.5s;
+}
+.home__img__wrapper .experience__badge {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background-color: color-mix(in srgb, #131825 60%, transparent 40%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  min-width: 140px;
+}
+.home__img__wrapper .experience__badge .years {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #10a3d7;
+  line-height: 1;
+}
+.home__img__wrapper .experience__badge .text {
+  font-size: 0.85rem;
+  color: #f2f8fe;
+  font-weight: 500;
+}
+.home .clientCounter {
+  position: absolute;
+  top: 30px;
+  right: -30px;
+  background-color: #131825;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 160px;
+}
+.home .clientCounter__number span {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.home .clientCounter__text span {
+  font-size: 0.85rem;
+  color: #f2f8fe;
 }/*# sourceMappingURL=custom.css.map */

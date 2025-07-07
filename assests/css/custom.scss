@@ -5,6 +5,7 @@ $heading-font: "Abel", sans-serif;
 $nav-backgraound: rgba(22, 29, 44, 0.95);
 $nav-font: mukta, sans-serif;
 $accent-color: #10a3d7;
+$surface-color: #131825;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -138,6 +139,12 @@ a {
     letter-spacing: -1px;
     font-family: $heading-font;
     margin-top: 0;
+
+    &__highlight {
+      color: $accent-color;
+      position: relative;
+      display: inline-block;
+    }
   }
 
   &__description {
@@ -184,6 +191,12 @@ a {
     max-width: 600px;
     margin: auto;
     padding: 0 20px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+    transition: transform 0.5s ease;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
     .home__image {
       width: 100%;
@@ -199,11 +212,67 @@ a {
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      background-color: #131825;
+      background-color: $surface-color;
       .top__left {
         top: -20px;
         left: -20px;
         animation-delay: 0.5s;
+      }
+    }
+
+    .experience__badge {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        background-color: color-mix(in srgb, $surface-color 60%, transparent 40%);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        border-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        min-width: 140px;
+
+        .years{
+          font-size: 2.2rem;
+          font-weight: 800;
+          color: $accent-color;
+          line-height: 1;
+        }
+
+        .text{
+          font-size: 0.85rem;
+          color: $primary_3;
+          font-weight: 500;
+        }
+      }
+  }
+
+  .clientCounter{
+    position: absolute;
+    top: 30px;
+    right:-30px;
+    background-color: $surface-color;
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 160px;
+
+    &__number{
+      span{
+        font-size: 2rem;
+        font-weight: 800;
+        color: $headings-color;
+      }
+    }
+
+    &__text{
+      span{
+        font-size: 0.85rem;
+        color: $primary_3;
       }
     }
   }
