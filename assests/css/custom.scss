@@ -770,24 +770,24 @@ a {
       overflow: hidden;
     }
 
-    &__icon{
+    &__icon {
       margin-bottom: 20px;
 
-      i{
+      i {
         font-size: 32px;
         color: $accent-color;
       }
     }
 
-    &__content{
-      h3{
+    &__content {
+      h3 {
         font-size: 20px;
         font-weight: 700;
         margin-bottom: 10px;
         color: $primary_3;
       }
 
-      p{
+      p {
         font-size: 15px;
         line-height: 1.6;
         color: mix($primary_3, transparent, 80%);
@@ -795,7 +795,7 @@ a {
       }
     }
 
-    &__status{
+    &__status {
       background-color: rgba(25, 135, 84, 0.1);
       color: #198754;
       display: inline-flex;
@@ -806,7 +806,7 @@ a {
       padding: 6px 12px;
       border-radius: 20px;
 
-      &__indicator{
+      &__indicator {
         background-color: #198754;
         width: 8px;
         height: 8px;
@@ -816,7 +816,7 @@ a {
     }
   }
 
-  &__additional__card{
+  &__additional__card {
     background-color: $surface-color;
     border-radius: 14px;
     padding: 30px;
@@ -825,7 +825,7 @@ a {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
     position: relative;
 
-    &__icon{
+    &__icon {
       width: 60px;
       height: 60px;
       border-radius: 12px;
@@ -835,26 +835,26 @@ a {
       justify-content: center;
       margin-bottom: 20px;
 
-      i{
+      i {
         font-size: 28px;
         color: $accent-color;
       }
     }
 
-    h4{
+    h4 {
       font-size: 20px;
       font-weight: 600px;
       margin-bottom: 15px;
     }
 
-    p{
+    p {
       font-size: 15px;
       line-height: 1.6;
       color: mix($default-color, transparent, 80%);
       margin-bottom: 30px;
     }
 
-    &__active{
+    &__active {
       background-color: rgba(25, 135, 84, 0.1);
       color: #198754;
       position: absolute;
@@ -867,9 +867,201 @@ a {
       padding: 5px 12px;
       border-radius: 20px;
 
-      i{
+      i {
         font-size: 14px;
       }
     }
   }
 }
+
+.altFeatures {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  border: none;
+  //background: mix($surface-color, transparent, 50%);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+
+  @include sectionWhole;
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      margin-bottom: 15px;
+
+      a:hover{
+        .altFeatures__navigation__icon{
+          background: $accent-color;
+
+          i{
+            color: $primary_3;
+          }
+        }
+
+        h4{
+          color: $accent-color;
+        }
+      }
+    }
+
+    .nav-link {
+      background: $surface-color;
+      border: none;
+      padding: 20px;
+      border: none;
+      border-radius: 12px;
+      background: $surface-color;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .nav-link.active {
+      background-color: $accent-color;
+
+      .altFeatures__navigation__icon {
+        background: mix(#ffffff, transparent, 15%);
+
+        i {
+          color: #ffffff;
+        }
+      }
+
+      h4{
+        color: $primary_3;
+      }
+
+      p{
+        color: mix(#ffffff, transparent, 80%);
+      }
+    }
+
+    &__link {
+      padding: 20px;
+      border: none;
+      border-radius: 12px;
+      background: $surface-color;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+
+      h4 {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0 0 5px 0;
+        color: $primary_3;
+        transition: all 0.4s ease;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 0;
+        color: mix($default-color, transparent, 60%);
+        transition: all 0.4s ease;
+      }
+    }
+
+    &__icon {
+      background: mix($primary_3, transparent, 15%);
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: mix($accent-color, transparent, 8%);
+      transition: all 0.4s ease;
+
+      i {
+        font-size: 24px;
+        color: $accent-color;
+        transition: all 0.4s ease;
+      }
+    }
+  }
+
+  &__content__box {
+    background: $surface-color;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+
+    h3 {
+      font-size: 28px;
+      font-weight: 700;
+      color: $primary_3;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    p {
+      color: mix($default-color, transparent, 80%);
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      background: linear-gradient(
+        135deg,
+        mix($accent-color, transparent, 8%),
+        mix($accent-color, transparent, 5%)
+      );
+      padding: 20px;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 30px 0 0 0;
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding-left: 8px;
+        transition: all 0.3s ease;
+
+        i {
+          font-size: 20px;
+          color: $accent-color;
+          margin-right: 12px;
+        }
+
+        span {
+          color: mix($default-color, transparent, 80%);
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+    img {
+      max-width: 100%;
+      height: auto;
+      transition: all 0.6s ease;
+    }
+  }
+}
+
+
