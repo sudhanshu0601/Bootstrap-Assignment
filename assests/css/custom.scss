@@ -50,6 +50,7 @@ $surface-color: #131825;
   font-weight: 700;
   font-size: 52px;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
@@ -891,16 +892,16 @@ a {
     &__item {
       margin-bottom: 15px;
 
-      a:hover{
-        .altFeatures__navigation__icon{
+      a:hover {
+        .altFeatures__navigation__icon {
           background: $accent-color;
 
-          i{
+          i {
             color: $primary_3;
           }
         }
 
-        h4{
+        h4 {
           color: $accent-color;
         }
       }
@@ -930,11 +931,11 @@ a {
         }
       }
 
-      h4{
+      h4 {
         color: $primary_3;
       }
 
-      p{
+      p {
         color: mix(#ffffff, transparent, 80%);
       }
     }
@@ -1064,4 +1065,423 @@ a {
   }
 }
 
+.solution {
+  @include sectionWhole;
+  position: relative;
+  padding: 100px 0;
+  background: linear-gradient(
+    170deg,
+    $primary_1 0%,
+    mix($primary_1, $accent-color, 95%) 100%
+  );
 
+  &__content {
+    position: relative;
+    border-radius: 20px;
+    background-color: $surface-color;
+    box-shadow: 0 20px 60px mix($accent-color, transparent, 8%);
+    overflow: hidden;
+
+    &__left {
+      padding: 3rem !important;
+
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: $primary_3;
+        line-height: 1.2;
+        margin-bottom: 1.5rem !important;
+        margin-top: 1.5rem !important;
+      }
+
+      p {
+        color: mix($default-color, transparent, 80%);
+        font-size: 1.05rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem !important;
+      }
+
+      &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .btn {
+        padding: 0.75rem 2rem;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+        box-shadow: none;
+      }
+
+      .btn.btn-primary {
+        background-color: $accent-color;
+        border-color: $accent-color;
+        color: $primary_3;
+        padding: 0.75rem 2rem;
+        font-weight: 600;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+        box-shadow: none;
+      }
+
+      .btn.btn-outline {
+        background-color: transparent;
+        border: 2px solid mix($accent-color, transparent, 70%);
+        color: $accent-color;
+      }
+
+      &__guarantee {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-left: 1rem;
+        color: $primary_3;
+        font-size: 0.9rem;
+        font-weight: 500;
+
+        i {
+          color: $accent-color;
+          font-size: 1.25rem;
+        }
+
+        span {
+          font-size: 0.9rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    &__badge {
+      display: inline-block;
+      background-color: mix($accent-color, transparent, 10%);
+      color: $accent-color;
+      padding: 0.6rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    &__benefits {
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+
+      &__item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+
+        &__icon {
+          width: 50px;
+          height: 50px;
+          min-width: 50px;
+          background: linear-gradient(
+            135deg,
+            $accent-color 0%,
+            mix($accent-color, transparent, 80%) 100%
+          );
+          color: $primary_3;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 12px;
+          margin-right: 1rem;
+          font-size: 1.25rem;
+        }
+
+        &__text {
+          h5 {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: $primary_3;
+          }
+
+          p {
+            margin: 0;
+            font-size: 13px;
+            color: mix($default-color, transparent, 75%);
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+
+    &__right {
+      position: relative;
+      height: 100%;
+      background-color: mix($accent-color, transparent, 5%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+      z-index: 2;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 2;
+        max-height: 400px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.portfolio {
+  @include sectionWhole;
+
+  &__title {
+    @include sectionTitle;
+
+    &__bg {
+      @include title__bg;
+    }
+  }
+
+  &__content {
+    &__sidebar {
+      background-color: mix($surface-color, $primary_3, 97%);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+
+      &__nav {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        li {
+          cursor: pointer;
+          padding: 12px 20px;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 1;
+          color: $primary_3;
+          transition: all 0.3s ease-in-out;
+          border-radius: 6px;
+          background: transparent;
+          position: relative;
+          border-left: 3px solid transparent;
+        }
+
+        .filter-active {
+          color: $accent-color;
+          background-color: mix($accent-color, transparent, 10%);
+          border-left-color: $accent-color;
+          font-weight: 700;
+        }
+      }
+    }
+
+    &__main__wrap {
+      transition: 0.4s;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      height: 100%;
+
+      img {
+        transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+      }
+    }
+
+    &__info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 25px;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.4) 60%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      z-index: 3;
+      transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: translateY(20px);
+      opacity: 1;
+
+      &__wrap {
+        transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+        //transform: translateY(20px);
+
+        h4 {
+          font-size: 20px;
+          color: $primary_3;
+          font-weight: 700;
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    &__category {
+      display: inline-block;
+      color: $accent-color;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    &__link {
+      display: flex;
+      gap: 12px;
+
+      a {
+        color: $primary_3;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: mix($accent-color, transparent, 70%);
+        border-radius: 50%;
+        font-size: 18px;
+        transition: 0.3s;
+      }
+    }
+  }
+}
+
+.pricing {
+  @include sectionWhole;
+
+  &__title {
+    @include sectionTitle;
+
+    &__bg {
+      @include title__bg;
+    }
+  }
+
+  &__item {
+    padding: 40px;
+    background-color: $surface-color;
+    border-radius: 16px;
+    text-align: center;
+    position: relative;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+
+    &__icon {
+      width: 56px;
+      height: 56px;
+      background-color: mix($accent-color, transparent, 10%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+
+      i {
+        font-size: 24px;
+        color: $accent-color;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    &__price {
+      font-size: 48px;
+      font-weight: 700;
+      color: $primary_3;
+      margin-bottom: 16px;
+    }
+
+    &__currency {
+      font-size: 24px;
+      font-weight: 500;
+      vertical-align: super;
+    }
+
+    &__period {
+      font-size: 16px;
+      color: mix($default-color, transparent, 60%);
+      font-weight: 400;
+    }
+
+    &__description {
+      font-size: 16px;
+      color: mix($default-color, transparent, 70%);
+      margin-bottom: 32px;
+    }
+
+    &__features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 32px;
+
+      li {
+        padding: 12px 0;
+        color: mix($default-color, transparent, 80%);
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+
+        i {
+          color: $accent-color;
+          font-size: 18px;
+        }
+      }
+    }
+
+    &__btn {
+      display: inline-block;
+      padding: 12px 32px;
+      background-color: mix($accent-color, transparent, 10%);
+      color: $accent-color;
+      border-radius: 50px;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    &__badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $accent-color;
+      color: $primary_3;
+      padding: 6px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  &__item.featured {
+    border: 2px solid mix($accent-color, transparent, 20%);
+    background: linear-gradient(
+      to bottom right,
+      mix($accent-color, transparent, 3%),
+      $surface-color
+    );
+
+    a {
+      background-color: $accent-color;
+      color: $primary_3;
+    }
+  }
+}
