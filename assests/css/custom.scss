@@ -2,11 +2,55 @@ $primary_1: #070d1a;
 $primary_2: #009cea;
 $primary_3: #f2f8fe;
 $primary_4: #111623;
+$default-color: #e4edf5;
 $heading-font: "Abel", sans-serif;
 $nav-backgraound: rgba(22, 29, 44, 0.95);
 $nav-font: mukta, sans-serif;
 $accent-color: #10a3d7;
 $surface-color: #131825;
+
+@mixin sectionWhole {
+  color: $default-color;
+  background-color: $primary_1;
+  padding: 60px 0;
+  scroll-margin-top: 0;
+  overflow: clip;
+}
+
+@mixin sectionTitle {
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 30px;
+  position: relative;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  p {
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@mixin title__bg {
+  position: absolute;
+  top: 4px;
+  color: mix($primary_3, transparent, 5%);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 1;
+}
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
@@ -280,40 +324,12 @@ a {
 }
 
 .about {
-  background-color: $primary_4;
-  padding: 60px 0;
-  overflow: clip;
+  @include sectionWhole;
 
   &__title {
-    text-align: center;
-    padding: 30px;
-    margin-bottom: 30px;
-    position: relative;
+    @include sectionTitle;
     &__bg {
-      position: absolute;
-      top: 4px;
-      color: mix($primary_3, transparent, 5%);
-      left: 0;
-      right: 0;
-      z-index: 1;
-      font-weight: 700;
-      font-size: 52px;
-      line-height: 1;
-    }
-
-    h2 {
-      font-size: 32px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      padding-bottom: 0;
-      position: relative;
-      z-index: 2;
-    }
-
-    p {
-      margin-bottom: 0;
-      position: relative;
-      z-index: 2;
+      @include title__bg;
     }
   }
 
@@ -388,14 +404,14 @@ a {
       margin-bottom: 1rem;
     }
 
-    h2{
+    h2 {
       font-size: 2.25rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
       line-height: 1.3;
     }
 
-    &__info{
+    &__info {
       margin-bottom: 1rem;
       font-size: 1rem;
       line-height: 1.7;
@@ -405,19 +421,19 @@ a {
       }
     }
 
-    &__valuesTitle{
+    &__valuesTitle {
       font-size: 1.25rem;
       font-weight: 600;
       margin: 2rem;
     }
 
-    &__valuesList{
+    &__valuesList {
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
     }
 
-    &valueItem{
+    &__valueItem {
       display: flex;
       align-items: center;
       gap: 0.75rem;
@@ -426,13 +442,13 @@ a {
       border-radius: 50px;
       transition: all 0.3s ease;
 
-      span{
+      span {
         font-weight: 500;
         font-size: 0.95rem;
       }
     }
 
-    &__valueIcon{
+    &__valueIcon {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -441,10 +457,418 @@ a {
       border-radius: 50%;
       background-color: $accent-color;
 
-      i{
+      i {
         color: #ffffff;
         font-size: 14px;
+      }
+    }
+  }
+}
 
+.stats {
+  color: $default-color;
+  background-color: $primary_1;
+  padding: 60px 0;
+  overflow: clip;
+
+  .row {
+    justify-content: center;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  &__item {
+    background: linear-gradient(
+      135deg,
+      mix($surface-color, transparent, 95%),
+      $surface-color
+    );
+    border-radius: 15px;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+
+    &__icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      transition: transform 0.3s ease;
+    }
+
+    i {
+      font-size: 36px;
+    }
+
+    span {
+      display: block;
+      font-size: 48px;
+      font-weight: 700;
+      color: $headings-color;
+      margin-bottom: 10px;
+      line-height: 1;
+      font-family: $heading-font;
+    }
+
+    p {
+      color: $default-color;
+      font-size: 18px;
+      margin: 0;
+      font-weight: 500;
+      font-family: $heading-font;
+      opacity: 0.8;
+    }
+  }
+
+  .stats__item:nth-child(1) .stats__item__icon {
+    background-color: mix($accent-color, transparent, 15%);
+    color: mix($accent-color, transparent, 90%);
+  }
+
+  .stats__item:nth-child(2) .stats__item__icon {
+    background-color: mix(#ff7e00, transparent, 15%);
+    color: mix(#ff7e00, transparent, 90%);
+  }
+
+  .stats__item:nth-child(3) .stats__item__icon {
+    background-color: mix(#00c875, transparent, 15%);
+    color: mix(#00c875, transparent, 90%);
+  }
+
+  .stats__item:nth-child(4) .stats__item__icon {
+    background-color: mix(#e83e8c, transparent, 15%);
+    color: mix(#e83e8c, transparent, 90%);
+  }
+}
+
+.services {
+  @include sectionWhole;
+  &__title {
+    @include sectionTitle;
+    &__bg {
+      @include title__bg;
+    }
+  }
+
+  &__content {
+    margin-bottom: 4rem;
+  }
+
+  &__intro {
+    padding-right: 2rem;
+  }
+
+  &__tag {
+    display: inline-block;
+    background-color: $accent-color;
+    color: $primary_3;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: $primary_3;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: mix($primary_3, transparent, 80%);
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &__item {
+      background: linear-gradient(
+        135deg,
+        $surface-color,
+        mix($surface-color, $accent-color, 95%)
+      );
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border-left: 4px solid $accent-color;
+    }
+
+    &__number {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $primary_3;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    &__text {
+      display: block;
+      font-size: 0.95rem;
+      color: mix($primary_3, transparent, 80%);
+      font-weight: 500;
+    }
+  }
+
+  &__card {
+    height: 100%;
+
+    &__content {
+      background-color: $surface-color;
+      border-radius: 8px;
+      padding: 2rem;
+      height: 100%;
+      transition: all 0.3s ease;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: $primary_3;
+      }
+
+      p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: mix($primary_3, transparent, 80%);
+        margin-bottom: 0;
+      }
+    }
+
+    &__icon {
+      width: 60px;
+      height: 60px;
+      background-color: mix($accent-color, transparent, 10%);
+      color: $accent-color;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.features {
+  @include sectionWhole;
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  &__title {
+    @include sectionTitle;
+    &__bg {
+      @include title__bg;
+    }
+  }
+
+  &__content {
+    display: flex;
+    margin-bottom: 60px;
+    gap: 40px;
+
+    &__main {
+      h2 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      p {
+        font-size: 17px;
+        line-height: 1.7;
+        color: mix($primary_3, transparent, 80%);
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__achievement {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    &__icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      background: mix($accent-color, transparent, 10%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        font-size: 22px;
+        color: $accent-color;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__value {
+      font-size: 24px;
+      font-weight: 700;
+      color: $primary_3;
+      line-height: 1.2;
+    }
+
+    &__text {
+      font-size: 14px;
+      color: mix($primary_3, transparent, 75%);
+    }
+  }
+
+  &__card {
+    &__row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    &__item {
+      border-left: 4px solid $accent-color;
+      background-color: $surface-color;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+      padding: 25px;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__icon{
+      margin-bottom: 20px;
+
+      i{
+        font-size: 32px;
+        color: $accent-color;
+      }
+    }
+
+    &__content{
+      h3{
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: $primary_3;
+      }
+
+      p{
+        font-size: 15px;
+        line-height: 1.6;
+        color: mix($primary_3, transparent, 80%);
+        margin-bottom: 20px;
+      }
+    }
+
+    &__status{
+      background-color: rgba(25, 135, 84, 0.1);
+      color: #198754;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 20px;
+
+      &__indicator{
+        background-color: #198754;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+    }
+  }
+
+  &__additional__card{
+    background-color: $surface-color;
+    border-radius: 14px;
+    padding: 30px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    position: relative;
+
+    &__icon{
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      background-color: mix($accent-color, transparent, 8%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      i{
+        font-size: 28px;
+        color: $accent-color;
+      }
+    }
+
+    h4{
+      font-size: 20px;
+      font-weight: 600px;
+      margin-bottom: 15px;
+    }
+
+    p{
+      font-size: 15px;
+      line-height: 1.6;
+      color: mix($default-color, transparent, 80%);
+      margin-bottom: 30px;
+    }
+
+    &__active{
+      background-color: rgba(25, 135, 84, 0.1);
+      color: #198754;
+      position: absolute;
+      bottom: 30px;
+      gap: 5px;
+      left: 30px;
+      display: inline-flex;
+      align-items: center;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: 20px;
+
+      i{
+        font-size: 14px;
       }
     }
   }
