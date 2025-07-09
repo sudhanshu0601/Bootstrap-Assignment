@@ -1485,3 +1485,176 @@ a {
     }
   }
 }
+
+.faq {
+  @include sectionWhole;
+
+  &__title {
+    @include sectionTitle;
+
+    &__bg {
+      @include title__bg;
+    }
+  }
+
+  &__sidebar {
+    position: sticky;
+    top: 100px;
+
+    &__img {
+      margin-bottom: 30px;
+      border-radius: 14px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.5s ease;
+      }
+    }
+
+    &__contact {
+      background-color: mix($accent-color, transparent, 10%);
+      border-radius: 14px;
+      padding: 30px;
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        i {
+          font-size: 24px;
+          color: $accent-color;
+        }
+      }
+
+      p {
+        margin-bottom: 20px;
+        font-size: 15px;
+        color: mix($default-color, transparent, 85%);
+      }
+
+      &__btn {
+        display: inline-block;
+        background-color: $accent-color;
+        color: $primary_3;
+        padding: 10px 24px;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      &__btn:hover{
+        color: $primary_3;
+      }
+    }
+  }
+
+  &__main {
+    &__tabs {
+      gap: 15px;
+      border-bottom: 1px solid mix($default-color, transparent, 10%);
+      padding-bottom: 15px;
+
+      &__item {
+        .nav-link {
+          background: transparent;
+          color: mix($default-color, transparent, 70%);
+          border-radius: 8px;
+          font-size: 16px;
+          font-weight: 600;
+          padding: 10px 25px;
+          transition: all 0.3s ease;
+        }
+
+        .nav-link.active {
+          background-color: $accent-color;
+          color: #ffffff;
+          box-shadow: 0 3px 10px mix($accent-color, transparent, 30%);
+        }
+
+        .nav-link:hover {
+          color: $primary_3;
+        }
+      }
+    }
+
+    &__content {
+      padding-top: 25px;
+
+      .tab-pane{
+        display: none;
+      }
+
+      .tab-pane.active {
+        display: block;
+      }
+
+      &__item {
+        position: relative;
+        margin-bottom: 20px;
+        padding: 25px 30px;
+        background-color: $surface-color;
+        border-radius: 14px;
+        box-shadow: 0 3px 10px mix($default-color, transparent, 5%);
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        h3 {
+          font-size: 17px;
+          font-weight: 600;
+          padding-right: 35px;
+          margin-bottom: 0;
+          transition: color 0.3s ease;
+        }
+
+        .faq-toggle{
+          position: absolute;
+          right: 25px;
+          top: 25px;
+          font-size: 18px;
+          color: $accent-color;
+          transition: transform 0.3s ease;
+        }
+      }
+
+      &__text {
+        display: grid;
+        grid-template-rows: 0fr;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+
+        p {
+          margin-bottom: 0;
+          padding-top: 15px;
+          font-size: 15px;
+          line-height: 1.6;
+          overflow: hidden;
+          color: mix($default-color, transparent, 80%);
+        }
+      }
+
+      &__item.faq-active {
+        background-color: mix($surface-color, $accent-color, 97%);
+        h3 {
+          color: $accent-color;
+        }
+
+        .faq__main__content__text{
+          grid-template-rows: 1fr;
+          visibility: visible;
+          opacity: 1;
+        }
+
+        i{
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
