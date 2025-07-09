@@ -13,6 +13,31 @@ toggleButton.addEventListener("click", () => {
 });
 // end of navbar section
 
+//altFeatures section
+const altFeaturesTab = document.querySelectorAll(
+  ".altFeatures__navigation__link"
+);
+const altFeaturesPane = document.querySelectorAll(
+  ".altFeatures__content__panel"
+);
+
+altFeaturesTab.forEach((btn, index) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    altFeaturesTab.forEach((b) => b.classList.remove("active"));
+
+    btn.classList.add("active");
+
+    altFeaturesPane.forEach((pane) => {
+      pane.classList.remove("show", "active");
+    });
+
+    altFeaturesPane[index].classList.add("show", "active");
+  });
+});
+//end of altFeatures section
+
 //portfolio section
 
 //end of porfolio section
@@ -34,7 +59,6 @@ tabButtons.forEach((btn, index) => {
     tabPanes[index].classList.add("show", "active");
   });
 });
-
 
 const faqItems = document.querySelectorAll(".faq__main__content__item");
 

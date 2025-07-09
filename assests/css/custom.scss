@@ -921,6 +921,7 @@ a {
     }
 
     .nav-link.active {
+      display: block;
       background-color: $accent-color;
 
       .altFeatures__navigation__icon {
@@ -992,60 +993,70 @@ a {
     }
   }
 
-  &__content__box {
-    background: $surface-color;
-    border-radius: 16px;
-    padding: 40px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
-    transition: all 0.4s ease;
-
-    h3 {
-      font-size: 28px;
-      font-weight: 700;
-      color: $primary_3;
-      margin-bottom: 20px;
-      position: relative;
-      padding-bottom: 15px;
+  &__content {
+    .tab-pane {
+      display: none;
     }
 
-    p {
-      color: mix($default-color, transparent, 80%);
-      margin-bottom: 20px;
-      font-size: 16px;
-      line-height: 1.6;
+    .tab-pane.active {
+      display: block;
     }
 
-    .highlight {
-      background: linear-gradient(
-        135deg,
-        mix($accent-color, transparent, 8%),
-        mix($accent-color, transparent, 5%)
-      );
-      padding: 20px;
-      border-radius: 12px;
-      position: relative;
-    }
+    &__box {
+      background: $surface-color;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s ease;
 
-    &__list {
-      list-style: none;
-      padding: 0;
-      margin: 30px 0 0 0;
+      h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: $primary_3;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 15px;
+      }
 
-      li {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-        padding-left: 8px;
-        transition: all 0.3s ease;
+      p {
+        color: mix($default-color, transparent, 80%);
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.6;
+      }
 
-        i {
-          font-size: 20px;
-          color: $accent-color;
-          margin-right: 12px;
-        }
+      .highlight {
+        background: linear-gradient(
+          135deg,
+          mix($accent-color, transparent, 8%),
+          mix($accent-color, transparent, 5%)
+        );
+        padding: 20px;
+        border-radius: 12px;
+        position: relative;
+      }
 
-        span {
-          color: mix($default-color, transparent, 80%);
+      &__list {
+        list-style: none;
+        padding: 0;
+        margin: 30px 0 0 0;
+
+        li {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+          padding-left: 8px;
+          transition: all 0.3s ease;
+
+          i {
+            font-size: 20px;
+            color: $accent-color;
+            margin-right: 12px;
+          }
+
+          span {
+            color: mix($default-color, transparent, 80%);
+          }
         }
       }
     }
@@ -1548,7 +1559,7 @@ a {
         transition: all 0.3s ease;
       }
 
-      &__btn:hover{
+      &__btn:hover {
         color: $primary_3;
       }
     }
@@ -1586,7 +1597,7 @@ a {
     &__content {
       padding-top: 25px;
 
-      .tab-pane{
+      .tab-pane {
         display: none;
       }
 
@@ -1612,7 +1623,7 @@ a {
           transition: color 0.3s ease;
         }
 
-        .faq-toggle{
+        .faq-toggle {
           position: absolute;
           right: 25px;
           top: 25px;
@@ -1645,13 +1656,13 @@ a {
           color: $accent-color;
         }
 
-        .faq__main__content__text{
+        .faq__main__content__text {
           grid-template-rows: 1fr;
           visibility: visible;
           opacity: 1;
         }
 
-        i{
+        i {
           transform: rotate(180deg);
         }
       }

@@ -11605,6 +11605,7 @@ a {
   cursor: pointer;
 }
 .altFeatures__navigation .nav-link.active {
+  display: block;
   background-color: #10a3d7;
 }
 .altFeatures__navigation .nav-link.active .altFeatures__navigation__icon {
@@ -11663,6 +11664,12 @@ a {
   font-size: 24px;
   color: #10a3d7;
   transition: all 0.4s ease;
+}
+.altFeatures__content .tab-pane {
+  display: none;
+}
+.altFeatures__content .tab-pane.active {
+  display: block;
 }
 .altFeatures__content__box {
   background: #131825;
