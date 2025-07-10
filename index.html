@@ -17,6 +17,9 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <header id="header" class="my__header">
@@ -30,11 +33,17 @@
             <li><a href="">Portfolio</a></li>
             <li><a href="">Team</a></li>
             <li class="dropdown">
-              <a href=""><span>Dropdown</span> <i></i></a>
+              <a href=""
+                ><span>Dropdown</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
               <ul class="dropdown-active">
                 <li><a href="">Dropdown 1</a></li>
                 <li class="dropdown">
-                  <a href=""><span>Deep Dropdown</span> <i></i></a>
+                  <a href=""
+                    ><span>Deep Dropdown</span>
+                    <i class="bi bi-chevron-down toggle-dropdown"></i
+                  ></a>
                   <ul>
                     <li><a href="">Deep Dropdown 1</a></li>
                     <li><a href="">Deep Dropdown 2</a></li>
@@ -59,7 +68,7 @@
       <section class="home">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
               <div class="home__subtitle">
                 <span>DESIGN STUDIO</span>
               </div>
@@ -84,7 +93,7 @@
                 <a href="" class="secondary-btn">View Portfolio</a>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
               <div class="home__img__wrapper">
                 <img
                   src="assests/img/home/home1.webp"
@@ -116,7 +125,7 @@
       </section>
       <!-- About Section -->
       <section id="about" class="about">
-        <div class="about__title container">
+        <div class="about__title container" data-aos="fade-up">
           <span class="about__title__bg">About</span>
           <h2>About</h2>
           <p>
@@ -125,8 +134,8 @@
           </p>
         </div>
         <div class="container">
-          <div class="row align-items-center gy-5">
-            <div class="col-lg-6">
+          <div class="row align-items-center gy-5" data-aos="fade-up">
+            <div class="col-lg-6" data-aos="fade-up">
               <div class="about__image__wrapper">
                 <img src="assests/img/about/about1.webp" alt="" />
                 <div class="about__mission">
@@ -145,12 +154,14 @@
             </div>
             <div class="col-lg-6">
               <div class="about__content">
-                <div class="about__content__badge">COMPANY OVERVIEW</div>
+                <div class="about__content__badge" data-aos="fade-up">
+                  COMPANY OVERVIEW
+                </div>
                 <h2>
                   Discover our journey and future aspirations towards innovation
                   and success
                 </h2>
-                <div class="about__content__info">
+                <div class="about__content__info" data-aos="fade-up">
                   <p>
                     Explore how we have developed our unique approach to tackle
                     complex challenges and provide exceptional service across
@@ -166,7 +177,7 @@
                 <h4 class="about__content__valuesTitle">
                   Fundamental Principles
                 </h4>
-                <div class="about__content__valuesList">
+                <div class="about__content__valuesList" data-aos="fade-up">
                   <div class="about__content__valueItem">
                     <div class="about__content__valueIcon">
                       <i class="bi bi-check2"></i>
@@ -213,30 +224,46 @@
       <section id="stats" class="stats">
         <div class="container">
           <div class="row">
-            <div class="col-log-10">
+            <div class="col-lg-10">
               <div class="stats__content">
-                <div class="stats__item">
+                <div
+                  class="stats__item"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
                   <div class="stats__item__icon">
                     <i class="bi bi-emoji-smile"></i>
                   </div>
                   <span class="stats__counter">232</span>
                   <p class="stats__text">Happy Clients</p>
                 </div>
-                <div class="stats__item">
+                <div
+                  class="stats__item"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
                   <div class="stats__item__icon">
                     <i class="bi bi-journal-richtext"></i>
                   </div>
                   <span class="stats__counter">521</span>
                   <p class="stats__text">Projects</p>
                 </div>
-                <div class="stats__item">
+                <div
+                  class="stats__item"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
                   <div class="stats__item__icon">
                     <i class="bi bi-headset"></i>
                   </div>
                   <span class="stats__counter">1463</span>
                   <p class="stats__text">Hours of Support</p>
                 </div>
-                <div class="stats__item">
+                <div
+                  class="stats__item"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
                   <div class="stats__item__icon">
                     <i class="bi bi-people"></i>
                   </div>
@@ -250,7 +277,7 @@
       </section>
       <!-- Services Section -->
       <section id="services" class="services">
-        <div class="services__title container">
+        <div class="services__title container" data-aos="fade-up">
           <span class="services__title__bg">Services</span>
           <h2>Services</h2>
           <p>
@@ -261,7 +288,7 @@
         <div class="container">
           <div class="services__content">
             <div class="row">
-              <div class="col-lg-9">
+              <div class="col-lg-9" data-aos="fade-right">
                 <div class="services__intro">
                   <div class="services__tag">Strategic Consulting</div>
                   <h2>
@@ -287,7 +314,7 @@
                   </p>
                 </div>
               </div>
-              <div class="col-lg-3">
+              <div class="col-lg-3" data-aos="fade-left">
                 <div class="services__stats">
                   <div class="services__stats__item">
                     <span class="services__stats__number">500+</span>
@@ -312,7 +339,7 @@
             </div>
           </div>
           <div class="row g-4">
-            <div class="col-lg-3">
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
               <div class="services__card">
                 <div class="services__card__content">
                   <div class="services__card__icon">
@@ -327,7 +354,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
               <div class="services__card">
                 <div class="services__card__content">
                   <div class="services__card__icon">
@@ -342,7 +369,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="300">
               <div class="services__card">
                 <div class="services__card__content">
                   <div class="services__card__icon">
@@ -357,7 +384,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="400">
               <div class="services__card">
                 <div class="services__card__content">
                   <div class="services__card__icon">
@@ -377,7 +404,7 @@
       </section>
       <!-- Features Section-->
       <section id="features" class="features">
-        <div class="container features__title">
+        <div class="container features__title" data-aos="fade-up">
           <span class="features__title__bg">Features</span>
           <h2>Features</h2>
           <p>
@@ -387,7 +414,7 @@
         </div>
         <div class="container">
           <div class="features__content">
-            <div class="features__content__main">
+            <div class="features__content__main" data-aos="fade-right">
               <h2>Integrated Business Framework</h2>
               <p>
                 Leveraging cutting-edge technology provides the foundation for
@@ -434,7 +461,7 @@
                 </div>
               </div>
             </div>
-            <div class="features__card">
+            <div class="features__card" data-aos="fade-left">
               <div class="features__card__row">
                 <div class="features__card__item">
                   <div class="features__card__icon">
@@ -511,7 +538,7 @@
           </div>
           <div class="features__additional">
             <div class="row gx-4 gy-4">
-              <div class="col-lg-4">
+              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="features__additional__card">
                   <div class="features__additional__card__icon">
                     <i class="bi bi-gear-wide-connected"></i>
@@ -527,7 +554,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4">
+              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="features__additional__card">
                   <div class="features__additional__card__icon">
                     <i class="bi bi-bar-chart-line"></i>
@@ -543,7 +570,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4">
+              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="features__additional__card">
                   <div class="features__additional__card__icon">
                     <i class="bi bi-graph-up-arrow"></i>
@@ -567,7 +594,7 @@
       <section class="altFeatures">
         <div class="container">
           <div class="row g-4">
-            <div class="col-lg-4">
+            <div class="col-lg-4" data-aos="fade-right">
               <ul class="altFeatures__navigation nav nav-tabs">
                 <li class="altFeatures__navigation__item nav-item">
                   <a class="altFeatures__navigation__link active nav-link">
@@ -636,7 +663,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-8" data-aos="fade-up">
               <div class="altFeatures__content">
                 <div
                   class="altFeatures__content__panel tab-pane fade active show"
@@ -932,12 +959,21 @@
       </section>
       <!-- Solution Section -->
       <section id="solution" class="solution">
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="solution__content">
             <div class="row g-0">
               <div class="col-lg-7">
-                <div class="solution__content__left">
-                  <span class="solution__content__badge">Premium Offer</span>
+                <div
+                  class="solution__content__left"
+                  data-aos="fade-right"
+                  data-aos-delay="200"
+                >
+                  <span
+                    class="solution__content__badge"
+                    data-aos="zoom-in"
+                    data-aos-delay="300"
+                    >Premium Offer</span
+                  >
                   <h2>Transform Your Experience With Our Solution</h2>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -945,7 +981,11 @@
                     aliqua. Ut enim ad minim veniam.
                   </p>
                   <div class="solution__content__benefits row">
-                    <div class="col-md-6">
+                    <div
+                      class="col-md-6"
+                      data-aos="fade-up"
+                      data-aos-delay="400"
+                    >
                       <div class="solution__content__benefits__item">
                         <div class="solution__content__benefits__item__icon">
                           <i class="bi bi-lightning-charge-fill"></i>
@@ -959,7 +999,11 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div
+                      class="col-md-6"
+                      data-aos="fade-up"
+                      data-aos-delay="500"
+                    >
                       <div class="solution__content__benefits__item">
                         <div class="solution__content__benefits__item__icon">
                           <i class="bi bi-shield-check"></i>
@@ -975,9 +1019,25 @@
                     </div>
                   </div>
                   <div class="solution__content__left__buttons">
-                    <a href="" class="btn btn-primary">Start Now</a>
-                    <a href="" class="btn btn-outline">Learn More</a>
-                    <div class="solution__content__left__guarantee">
+                    <a
+                      href=""
+                      class="btn btn-primary"
+                      data-aos="fade-up"
+                      data-aos-delay="600"
+                      >Start Now</a
+                    >
+                    <a
+                      href=""
+                      class="btn btn-outline"
+                      data-aos="fade-up"
+                      data-aos-delay="700"
+                      >Learn More</a
+                    >
+                    <div
+                      class="solution__content__left__guarantee"
+                      data-aos="fade-up"
+                      data-aos-delay="800"
+                    >
                       <i class="bi bi-patch-check-fill"></i>
                       <span>30-Day Money Back</span>
                     </div>
@@ -985,7 +1045,11 @@
                 </div>
               </div>
               <div class="col-lg-5">
-                <div class="solution__content__right">
+                <div
+                  class="solution__content__right"
+                  data-aos="zoom-in"
+                  data-aos-delay="300"
+                >
                   <img src="assests/img/features/feature2.webp" alt="" />
                 </div>
               </div>
@@ -995,7 +1059,11 @@
       </section>
       <!-- Portfolio Section -->
       <section id="portfolio" class="portfolio">
-        <div class="portfolio__title container">
+        <div
+          class="portfolio__title container"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <span class="portfolio__title__bg">Portfolio</span>
           <h2>Portfolio</h2>
           <p>
@@ -1003,11 +1071,15 @@
             consectetur velit
           </p>
         </div>
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="portfolio__content">
             <div class="row">
               <div class="col-lg-3">
-                <div class="portfolio__content__sidebar">
+                <div
+                  class="portfolio__content__sidebar"
+                  data-aos="fade-right"
+                  data-aos-delay="150"
+                >
                   <ul class="portfolio__content__sidebar__nav">
                     <li data-filter="*" class="filter-active">All Projects</li>
                     <li data-filter=".filter-photography">Photography</li>
@@ -1018,8 +1090,14 @@
                 </div>
               </div>
               <div class="col-lg-9">
-                <div class="row gy-4 portfolio__content__main">
-                  <div class="col-lg-6 col-md-6">
+                <div
+                  class="row gy-4 portfolio__content__main"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div
+                    class="col-lg-6 col-md-6 portfolio-item filter-photography"
+                  >
                     <div class="portfolio__content__main__wrap">
                       <img
                         src="assests/img/portfolio/portfolio-portrait-1.webp"
@@ -1046,22 +1124,49 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6 col-md-6">
+                  <div class="col-lg-6 col-md-6 portfolio-item filter-design">
                     <div class="portfolio__content__main__wrap">
                       <img
-                        src="assests/img/portfolio/portfolio-portrait-1.webp"
+                        src="assests/img/portfolio/portfolio-2.webp"
                         alt=""
                         class="img-fluid"
                       />
                       <div class="portfolio__content__info">
                         <div class="portfolio__content__info__wrap">
                           <span class="portfolio__content__category">
-                            Phototgraphy
+                            Web Design
+                          </span>
+                          <h4>Capturing Moments</h4>
+                          <div class="portfolio__content__link">
+                            <a href="assests/img/portfolio/portfolio-2.webp">
+                              <i class="bi bi-plus-lg"></i>
+                            </a>
+                            <a href="">
+                              <i class="bi bi-arrow-right"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-lg-6 col-md-6 portfolio-item filter-automotive"
+                  >
+                    <div class="portfolio__content__main__wrap">
+                      <img
+                        src="assests/img/portfolio/portfolio-portrait-2.webp"
+                        alt=""
+                        class="img-fluid"
+                      />
+                      <div class="portfolio__content__info">
+                        <div class="portfolio__content__info__wrap">
+                          <span class="portfolio__content__category">
+                            Automotive
                           </span>
                           <h4>Capturing Moments</h4>
                           <div class="portfolio__content__link">
                             <a
-                              href="assests/img/portfolio/portfolio-portrait-1.webp"
+                              href="assests/img/portfolio/portfolio-portrait-2.webp"
                             >
                               <i class="bi bi-plus-lg"></i>
                             </a>
@@ -1073,22 +1178,22 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6 col-md-6">
+                  <div class="col-lg-6 col-md-6 portfolio-item filter-nature">
                     <div class="portfolio__content__main__wrap">
                       <img
-                        src="assests/img/portfolio/portfolio-portrait-1.webp"
+                        src="assests/img/portfolio/portfolio-portrait-4.webp"
                         alt=""
                         class="img-fluid"
                       />
                       <div class="portfolio__content__info">
                         <div class="portfolio__content__info__wrap">
                           <span class="portfolio__content__category">
-                            Phototgraphy
+                            Nature
                           </span>
                           <h4>Capturing Moments</h4>
                           <div class="portfolio__content__link">
                             <a
-                              href="assests/img/portfolio/portfolio-portrait-1.webp"
+                              href="assests/img/portfolio/portfolio-portrait-4.webp"
                             >
                               <i class="bi bi-plus-lg"></i>
                             </a>
@@ -1100,10 +1205,12 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6 col-md-6">
+                  <div
+                    class="col-lg-6 col-md-6 portfolio-item filter-photography"
+                  >
                     <div class="portfolio__content__main__wrap">
                       <img
-                        src="assests/img/portfolio/portfolio-portrait-1.webp"
+                        src="assests/img/portfolio/portfolio-5.webp"
                         alt=""
                         class="img-fluid"
                       />
@@ -1114,9 +1221,7 @@
                           </span>
                           <h4>Capturing Moments</h4>
                           <div class="portfolio__content__link">
-                            <a
-                              href="assests/img/portfolio/portfolio-portrait-1.webp"
-                            >
+                            <a href="assests/img/portfolio/portfolio-5.webp">
                               <i class="bi bi-plus-lg"></i>
                             </a>
                             <a href="">
@@ -1127,50 +1232,21 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-6 col-md-6">
+                  <div class="col-lg-6 col-md-6 portfolio-item filter-design">
                     <div class="portfolio__content__main__wrap">
                       <img
-                        src="assests/img/portfolio/portfolio-portrait-1.webp"
+                        src="assests/img/portfolio/portfolio-6.webp"
                         alt=""
                         class="img-fluid"
                       />
                       <div class="portfolio__content__info">
                         <div class="portfolio__content__info__wrap">
                           <span class="portfolio__content__category">
-                            Phototgraphy
+                            Web Design
                           </span>
                           <h4>Capturing Moments</h4>
                           <div class="portfolio__content__link">
-                            <a
-                              href="assests/img/portfolio/portfolio-portrait-1.webp"
-                            >
-                              <i class="bi bi-plus-lg"></i>
-                            </a>
-                            <a href="">
-                              <i class="bi bi-arrow-right"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6">
-                    <div class="portfolio__content__main__wrap">
-                      <img
-                        src="assests/img/portfolio/portfolio-portrait-1.webp"
-                        alt=""
-                        class="img-fluid"
-                      />
-                      <div class="portfolio__content__info">
-                        <div class="portfolio__content__info__wrap">
-                          <span class="portfolio__content__category">
-                            Phototgraphy
-                          </span>
-                          <h4>Capturing Moments</h4>
-                          <div class="portfolio__content__link">
-                            <a
-                              href="assests/img/portfolio/portfolio-portrait-1.webp"
-                            >
+                            <a href="assests/img/portfolio/portfolio-6.webp">
                               <i class="bi bi-plus-lg"></i>
                             </a>
                             <a href="">
@@ -1189,7 +1265,7 @@
       </section>
       <!-- Pricing Section -->
       <section id="pricing" class="pricing">
-        <div class="pricing__title container">
+        <div class="pricing__title container" data-aos="fade-up">
           <span class="pricing__title__bg">Pricing</span>
           <h2>Pricing</h2>
           <p>
@@ -1197,9 +1273,13 @@
             consectetur velit
           </p>
         </div>
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4 justify-content-center">
-            <div class="col-lg-4 col-md-6">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <div class="pricing__item">
                 <div class="pricing__item__icon">
                   <i class="bi bi-star"></i>
@@ -1231,7 +1311,11 @@
                 <a href="" class="pricing__item__btn">Buy Now</a>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div class="pricing__item featured">
                 <div class="pricing__item__badge">Recommended</div>
                 <div class="pricing__item__icon">
@@ -1264,7 +1348,11 @@
                 <a href="" class="pricing__item__btn">Buy Now</a>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <div class="pricing__item">
                 <div class="pricing__item__icon">
                   <i class="bi bi-star-fill"></i>
@@ -1301,7 +1389,7 @@
       </section>
       <!-- Faq Section-->
       <section id="faq" class="faq">
-        <div class="faq__title container">
+        <div class="faq__title container" data-aos="fade-up">
           <span class="faq__title__bg">Frequently Asked Questions</span>
           <h2>Frequently Asked Questions</h2>
           <p>
@@ -1309,9 +1397,9 @@
             consectetur velit
           </p>
         </div>
-        <div class="container">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row align-items-start gy-4">
-            <div class="col-lg-5">
+            <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200">
               <div class="faq__sidebar">
                 <div class="faq__sidebar__img">
                   <img src="assests/img/portfolio/illustration-5.webp" alt="" />
@@ -1333,7 +1421,11 @@
             </div>
             <div class="col-lg-7">
               <div class="faq__main">
-                <ul class="faq__main__tabs nav mb-4">
+                <ul
+                  class="faq__main__tabs nav mb-4"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
                   <li class="faq__main__tabs__item">
                     <button class="nav-link active">General Inquiries</button>
                   </li>
@@ -1347,7 +1439,7 @@
                 <div class="faq__main__content">
                   <div class="tab-pane fade show active">
                     <div class="accordion">
-                      <div class="faq__main__content__item">
+                      <div class="faq__main__content__item" data-aos="fade-up" data-aos-delay="150">
                         <h3>How do I create a new account?</h3>
                         <div class="faq__main__content__text">
                           <p>
@@ -1360,7 +1452,7 @@
                         </div>
                         <i class="bi bi-chevron-down faq-toggle"></i>
                       </div>
-                      <div class="faq__main__content__item">
+                      <div class="faq__main__content__item" data-aos="fade-up" data-aos-delay="200">
                         <h3>What are the system requirements?</h3>
                         <div class="faq__main__content__text">
                           <p>
@@ -1372,7 +1464,7 @@
                         </div>
                         <i class="bi bi-chevron-down faq-toggle"></i>
                       </div>
-                      <div class="faq__main__content__item">
+                      <div class="faq__main__content__item" data-aos="fade-up" data-aos-delay="250">
                         <h3>Can I access my data offline?</h3>
                         <div class="faq__main__content__text">
                           <p>
@@ -1385,7 +1477,7 @@
                         </div>
                         <i class="bi bi-chevron-down faq-toggle"></i>
                       </div>
-                      <div class="faq__main__content__item">
+                      <div class="faq__main__content__item" data-aos="fade-up" data-aos-delay="300">
                         <h3>How do I report a bug or issue?</h3>
                         <div class="faq__main__content__text">
                           <p>
@@ -1397,7 +1489,7 @@
                         </div>
                         <i class="bi bi-chevron-down faq-toggle"></i>
                       </div>
-                      <div class="faq__main__content__item">
+                      <div class="faq__main__content__item" data-aos="fade-up" data-aos-delay="350">
                         <h3>What is your data privacy policy?</h3>
                         <div class="faq__main__content__text">
                           <p>
@@ -1412,7 +1504,11 @@
                   </div>
                   <div class="tab-pane fade">
                     <div class="accordion">
-                      <div class="faq__main__content__item">
+                      <div
+                        class="faq__main__content__item"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                      >
                         <h3>How do I reset my password?</h3>
                         <div class="faq__main__content__text">
                           <p>
@@ -1424,7 +1520,11 @@
                         </div>
                         <i class="bi bi-chevron-down faq-toggle"></i>
                       </div>
-                      <div class="faq__main__content__item">
+                      <div
+                        class="faq__main__content__item"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                      >
                         <h3>How to update account information?</h3>
                         <div class="faq__main__content__text">
                           <p>
@@ -1440,7 +1540,11 @@
                   </div>
                   <div class="tab-pane fade">
                     <div class="accordion">
-                      <div class="faq__main__content__item">
+                      <div
+                        class="faq__main__content__item"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                      >
                         <h3>What payment methods are accepted?</h3>
                         <div class="faq__main__content__text">
                           <p>
@@ -1453,7 +1557,11 @@
                         </div>
                         <i class="bi bi-chevron-down faq-toggle"></i>
                       </div>
-                      <div class="faq__main__content__item">
+                      <div
+                        class="faq__main__content__item"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                      >
                         <h3>When will my payment be processed?</h3>
                         <div class="faq__main__content__text">
                           <p>
@@ -1466,7 +1574,11 @@
                         </div>
                         <i class="bi bi-chevron-down faq-toggle"></i>
                       </div>
-                      <div class="faq__main__content__item">
+                      <div
+                        class="faq__main__content__item"
+                        data-aos="fade-up"
+                        data-aos-delay="250"
+                      >
                         <h3>Can I get a refund for my purchase?</h3>
                         <div class="faq__main__content__text">
                           <p>
@@ -1487,9 +1599,477 @@
         </div>
       </section>
       <!-- Team Section -->
+      <section class="team">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="team__header" data-aos="fade-up" data-aos-delay="200">
+            <div class="row align items center">
+              <div class="col-lg-6">
+                <h2>Our Professional Team</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  elit tellus luctus nec ullamcorper mattis pulvinar dapibus
+                  leo.
+                </p>
+              </div>
+              <div class="team__btnSection col-lg-6">
+                <div class="team__controls">
+                  <button class="team__controls__btn team__prev">
+                    <i class="bi bi-chevron-left"></i>
+                  </button>
+                  <button class="team__controls__btn team__next">
+                    <i class="bi bi-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team__slider" data-aos="fade-up" data-aos-delay="300">
+            <div id="sliderWrapper" class="team__slider__wrapper">
+              <div class="team__slider__wrapper__swipe">
+                <div class="team__member">
+                  <div class="team__member__image">
+                    <img src="assests/img/team/person-f-7.webp" alt="" />
+                    <div class="team__member__social">
+                      <a href="">
+                        <i class="bi-twitter-x"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-facebook"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-instagram"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="team__member__content">
+                    <h3>Emily Rodriguez</h3>
+                    <span>Porject Manager</span>
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus
+                      qui blanditiis praesentium.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="team__slider__wrapper__swipe">
+                <div class="team__member">
+                  <div class="team__member__image">
+                    <img src="assests/img/team/person-m-3.webp" alt="" />
+                    <div class="team__member__social">
+                      <a href="">
+                        <i class="bi-twitter-x"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-facebook"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-instagram"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="team__member__content">
+                    <h3>Marcus Wilson</h3>
+                    <span>Chief Technology Officer</span>
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus
+                      qui blanditiis praesentium.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="team__slider__wrapper__swipe">
+                <div class="team__member">
+                  <div class="team__member__image">
+                    <img src="assests/img/team/person-f-5.webp" alt="" />
+                    <div class="team__member__social">
+                      <a href="">
+                        <i class="bi-twitter-x"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-facebook"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-instagram"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="team__member__content">
+                    <h3>Sophia Reynolds</h3>
+                    <span>Product Designer</span>
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus
+                      qui blanditiis praesentium.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="team__slider__wrapper__swipe">
+                <div class="team__member">
+                  <div class="team__member__image">
+                    <img src="assests/img/team/person-m-8.webp" alt="" />
+                    <div class="team__member__social">
+                      <a href="">
+                        <i class="bi-twitter-x"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-facebook"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-instagram"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="team__member__content">
+                    <h3>Daniel Chen</h3>
+                    <span>Marketing Specialist</span>
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus
+                      qui blanditiis praesentium.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="team__slider__wrapper__swipe">
+                <div class="team__member">
+                  <div class="team__member__image">
+                    <img src="assests/img/team/person-f-9.webp" alt="" />
+                    <div class="team__member__social">
+                      <a href="">
+                        <i class="bi-twitter-x"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-facebook"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-instagram"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="team__member__content">
+                    <h3>Olivia Thompson</h3>
+                    <span>Lead Developer</span>
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus
+                      qui blanditiis praesentium.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="team__slider__wrapper__swipe">
+                <div class="team__member">
+                  <div class="team__member__image">
+                    <img src="assests/img/team/person-m-12.webp" alt="" />
+                    <div class="team__member__social">
+                      <a href="">
+                        <i class="bi-twitter-x"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-facebook"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-instagram"></i>
+                      </a>
+                      <a href="">
+                        <i class="bi bi-linkedin"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="team__member__content">
+                    <h3>Jason Parker</h3>
+                    <span>UI/UX Designer</span>
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus
+                      qui blanditiis praesentium.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section class="contact">
+        <div class="contact__title container" data-aos="fade-up">
+          <span class="contact__title__bg">Contact</span>
+          <h2>Contact</h2>
+          <p>
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit
+          </p>
+        </div>
+        <div class="container">
+          <div class="contact__wrapper">
+            <div class="contact__panel">
+              <div class="contact__header">
+                <h3>Contact Information</h3>
+                <p>
+                  Dignissimos deleniti accusamus rerum voluptate. Dignissimos
+                  rerum sit maiores reiciendis voluptate inventore ut.
+                </p>
+              </div>
+              <div class="contact__card">
+                <div class="contact__card__info">
+                  <div class="contact__card__icon">
+                    <i class="bi bi-pin-map-fill"></i>
+                  </div>
+                  <div class="contact__card__content">
+                    <h4>Our Location</h4>
+                    <p>4952 Hilltop Dr, Anytown, CA 90210</p>
+                  </div>
+                </div>
+                <div class="contact__card__info">
+                  <div class="contact__card__icon">
+                    <i class="bi bi-envelope-open"></i>
+                  </div>
+                  <div class="contact__card__content">
+                    <h4>Email Us</h4>
+                    <p>info@example.com</p>
+                  </div>
+                </div>
+                <div class="contact__card__info">
+                  <div class="contact__card__icon">
+                    <i class="bi bi-telephone-fill"></i>
+                  </div>
+                  <div class="contact__card__content">
+                    <h4>Call Us</h4>
+                    <p>+1 (555) 123-4567</p>
+                  </div>
+                </div>
+                <div class="contact__card__info">
+                  <div class="contact__card__icon">
+                    <i class="bi bi-clock-history"></i>
+                  </div>
+                  <div class="contact__card__content">
+                    <h4>Working Hours</h4>
+                    <p>Monday-Saturday: 9AM - 7PM</p>
+                  </div>
+                </div>
+              </div>
+              <div class="contact__panel__socials">
+                <h5>Follow Us</h5>
+                <div class="contact__panel__socials__icon">
+                  <a href="">
+                    <i class="bi bi-facebook"></i>
+                  </a>
+                  <a href="">
+                    <i class="bi bi-twitter-x"></i>
+                  </a>
+                  <a href="">
+                    <i class="bi bi-instagram"></i>
+                  </a>
+                  <a href="">
+                    <i class="bi bi-linkedin"></i>
+                  </a>
+                  <a href="">
+                    <i class="bi bi-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="contact__form">
+              <div class="contact__map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  frameborder="0"
+                ></iframe>
+              </div>
+              <div class="contact__form__container">
+                <h3>Send Us a Message</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit mauris
+                  hendrerit faucibus imperdiet nec eget felis.
+                </p>
+                <form action="">
+                  <div class="contact__form__floating form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nameInput"
+                      name="name"
+                      placeholder="Full Name"
+                      required
+                    />
+                    <label for="nameInput">Full Name</label>
+                  </div>
+                  <div class="contact__form__floating form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="emailInput"
+                      name="email"
+                      placeholder="Email Address"
+                      required
+                    />
+                    <label for="emailInput">Email Address</label>
+                  </div>
+                  <div class="contact__form__floating form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="subjectInput"
+                      name="name"
+                      placeholder="Subject"
+                      required
+                    />
+                    <label for="subjectInput">Subject</label>
+                  </div>
+                  <div class="contact__form__floating form-floating">
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      id="messageInput"
+                      rows="5"
+                      placeholder="Your Message"
+                      style="height: 150px"
+                      required
+                    ></textarea>
+                    <label for="messageInput">Your Message</label>
+                  </div>
+                  <div class="my-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">
+                      Your message has been sent. Thank you!
+                    </div>
+                  </div>
+                  <div class="d-grid">
+                    <button class="btn-submit">
+                      Send Message
+                      <i class="bi bi-send-fill ms-2"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <header></header>
+    <footer id="footer" class="footer">
+      <div class="footer__top container">
+        <div class="row gy-4">
+          <div class="footer__top__about col-lg-5 col-md-12">
+            <a href="" class="footer__logo">
+              <span class="footer__logo__name">Visible</span>
+            </a>
+            <p>
+              Cras fermentum odio eu feugiat lide par naso tierra. Justo eget
+              nada terra videa magna derita valies darta donna mare fermentum
+              iaculis eu non diam phasellus.
+            </p>
+            <div class="footer__socials">
+              <a href="">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+              <a href="">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer__top__links col-lg-2 col-6">
+            <h4>Useful Links</h4>
+            <ul>
+              <li>
+                <a href="">Home</a>
+              </li>
+              <li>
+                <a href="">About Us</a>
+              </li>
+              <li>
+                <a href="">Services</a>
+              </li>
+              <li>
+                <a href="">Term of Service</a>
+              </li>
+              <li>
+                <a href="">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__top__links col-lg-2 col-6">
+            <h4>Our Services</h4>
+            <ul>
+              <li>
+                <a href="">Web Design</a>
+              </li>
+              <li>
+                <a href="">Web Development</a>
+              </li>
+              <li>
+                <a href="">Product Management</a>
+              </li>
+              <li>
+                <a href="">Marketing</a>
+              </li>
+              <li>
+                <a href="">Graphic Design</a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="footer__top__contact col-lg-3 col-md-12 text center text-md-start"
+          >
+            <h4>Contact Us</h4>
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p>United States</p>
+            <p class="mt-4">
+              <strong>Phone:</strong>
+              <span>+1 5589 55488 55</span>
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <span>info@example.com</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copyright container">
+        <p>
+          &copy;
+          <span>Copyright</span>
+          <strong class="px-1 sitename">Visible</strong>
+          <span>All Rights Reserved</span>
+        </p>
+        <div class="footer__copyright__credits">
+          Designed by
+          <a href="">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+    <a href="#" id="scroll-top" class="scroll-top active">
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assests/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
