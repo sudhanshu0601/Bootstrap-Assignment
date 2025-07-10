@@ -119,118 +119,67 @@ document.addEventListener("DOMContentLoaded", () => {
   //end of faq section
 
   //team section
-  const wrapper = document.querySelector(".team__slider__wrapper");
+  const track = document.querySelector(".team__slider__wrapper");
   const nextBtn = document.querySelector(".team__next");
   const prevBtn = document.querySelector(".team__prev");
-  let slides = Array.from(
-    document.querySelectorAll(".team__slider__wrapper__swipe")
-  );
 
-  let index = 0;
-  let autoplayDelay = 5000;
-  let autoplay = true;
-  let intervalId;
-  let slideWidth = 0;
-  let slidesPerView = 1;
+  let isAnimating = false;
+  let cardWidth = getCardWidth();
 
-  function getSlidesPerView() {
-    if (window.innerWidth >= 1200) return 4;
-    if (window.innerWidth >= 992) return 3;
-    if (window.innerWidth >= 576) return 2;
-    return 1;
+  function getCardWidth() {
+    const card = track.querySelector(".team__slider__wrapper__swipe");
+    const style = window.getComputedStyle(card);
+    const gap = parseFloat(style.marginRight) || 30;
+    return card.getBoundingClientRect().width + gap;
   }
 
-  function cloneSlides() {
-    const beforeClones = slides
-      .slice(-slidesPerView)
-      .map((slide) => slide.cloneNode(true));
-    const afterClones = slides
-      .slice(0, slidesPerView)
-      .map((slide) => slide.cloneNode(true));
+  function slideNext() {
+    if (isAnimating) return;
+    isAnimating = true;
 
-    beforeClones.forEach((clone) => {
-      clone.classList.add("clone");
-      wrapper.prepend(clone);
-    });
+    track.style.transition = "transform 0.5s ease";
+    track.style.transform = `translateX(-${cardWidth}px)`;
 
-    afterClones.forEach((clone) => {
-      clone.classList.add("clone");
-      wrapper.append(clone);
-    });
-
-    slides = Array.from(wrapper.querySelectorAll(".slide"));
+    setTimeout(() => {
+      const first = track.children[0];
+      track.appendChild(first);
+      track.style.transition = "none";
+      track.style.transform = "translateX(0)";
+      isAnimating = false;
+    }, 500);
   }
 
-  function goToSlide(newIndex, animated = true) {
-    index = newIndex;
-    wrapper.style.transition = animated ? "transform 0.5s ease" : "none";
-    const offset = (slideWidth + 30) * (index + slidesPerView);
-    wrapper.style.transform = `translateX(-${offset}px)`;
-  }
+  function slidePrev() {
+    if (isAnimating) return;
+    isAnimating = true;
 
-  function nextSlide() {
-    index++;
-    goToSlide(index);
-    if (index >= slides.length - slidesPerView * 2) {
-      setTimeout(() => goToSlide(0, false), 510);
-    }
-  }
+    const last = track.children[track.children.length - 1];
+    track.insertBefore(last, track.children[0]);
+    track.style.transition = "none";
+    track.style.transform = `translateX(-${cardWidth}px)`;
 
-  function prevSlide() {
-    index--;
-    goToSlide(index);
-    if (index < 0) {
-      setTimeout(
-        () => goToSlide(slides.length - slidesPerView * 2 - 1, false),
-        510
-      );
-    }
-  }
-
-  function startAutoplay() {
-    if (autoplay) {
-      intervalId = setInterval(nextSlide, autoplayDelay);
-    }
-  }
-
-  function resetAutoplay() {
-    if (autoplay) {
-      clearInterval(intervalId);
-      startAutoplay();
-    }
-  }
-
-  function initSlider() {
-    slidesPerView = getSlidesPerView();
-    cloneSlides();
-
-    // Wait for layout calculation
     requestAnimationFrame(() => {
-      const firstSlide = wrapper.querySelector(".slide");
-      if (!firstSlide) {
-        console.error("No slides found!");
-        return;
-      }
-      slideWidth = firstSlide.offsetWidth;
-      goToSlide(0, false);
-      startAutoplay();
+      requestAnimationFrame(() => {
+        track.style.transition = "transform 0.5s ease";
+        track.style.transform = "translateX(0)";
+      });
     });
+
+    setTimeout(() => {
+      isAnimating = false;
+    }, 500);
   }
-
-  nextBtn.addEventListener("click", () => {
-    nextSlide();
-    resetAutoplay();
-  });
-
-  prevBtn.addEventListener("click", () => {
-    prevSlide();
-    resetAutoplay();
-  });
 
   window.addEventListener("resize", () => {
-    location.reload(); // Easy way to re-init clones on resize
+    cardWidth = getCardWidth();
   });
+  
+  nextBtn.addEventListener("click", slideNext);
+  prevBtn.addEventListener("click", slidePrev);
 
-  document.addEventListener("DOMContentLoaded", initSlider);
+  setInterval(() => {
+    slideNext();
+  }, 4000);
+
   //end of team section
 });

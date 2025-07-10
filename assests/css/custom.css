@@ -10771,7 +10771,17 @@ body {
   color: #f2f8fe;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   font-family: "Abel", sans-serif;
 }
 
@@ -11451,6 +11461,11 @@ a {
   margin-bottom: 60px;
   gap: 40px;
 }
+@media (max-width: 991px) {
+  .features__content {
+    flex-direction: column;
+  }
+}
 .features__content__main h2, .features__content__main .h2 {
   font-size: 36px;
   font-weight: 700;
@@ -12004,6 +12019,20 @@ a {
   height: 100%;
   transform: scale(0.95);
 }
+.portfolio__content__main__wrap:hover {
+  transform: translateY(-5px);
+}
+.portfolio__content__main__wrap:hover img {
+  transform: scale(1.08);
+}
+.portfolio__content__main__wrap:hover .portfolio__content__info {
+  transform: translateY(0);
+  opacity: 1;
+}
+.portfolio__content__main__wrap:hover .portfolio__content__info a:hover {
+  background-color: #10a3d7;
+  transform: translateY(-3px);
+}
 .portfolio__content__main__wrap img {
   transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   width: 100%;
@@ -12021,7 +12050,7 @@ a {
   z-index: 3;
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
   transform: translateY(20px);
-  opacity: 1;
+  opacity: 0;
 }
 .portfolio__content__info__wrap {
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -12455,6 +12484,14 @@ a {
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease;
   height: 100%;
+}
+.team__member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+.team__member:hover .team__member__social {
+  opacity: 1;
+  bottom: 20px;
 }
 .team__member__image {
   position: relative;
