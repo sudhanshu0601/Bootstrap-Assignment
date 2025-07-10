@@ -3,12 +3,39 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.querySelector(".my__toggle");
   const navbar = document.querySelector(".my__navbar");
 
+  // Toggle navbar on button click
   toggleButton.addEventListener("click", () => {
     navbar.classList.toggle("show");
     toggleButton.classList.toggle("show");
+
     if (navbar.classList.contains("show")) {
       toggleButton.classList.replace("bi-list", "bi-x");
     } else {
+      toggleButton.classList.replace("bi-x", "bi-list");
+    }
+  });
+
+  // Close navbar when any link inside is clicked
+  navbar.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navbar.classList.remove("show");
+      toggleButton.classList.remove("show");
+      toggleButton.classList.replace("bi-x", "bi-list");
+    });
+  });
+
+  // Close navbar when clicking outside
+  document.addEventListener("click", (event) => {
+    const isClickInsideNavbar = navbar.contains(event.target);
+    const isClickOnToggle = toggleButton.contains(event.target);
+
+    if (
+      !isClickInsideNavbar &&
+      !isClickOnToggle &&
+      navbar.classList.contains("show")
+    ) {
+      navbar.classList.remove("show");
+      toggleButton.classList.remove("show");
       toggleButton.classList.replace("bi-x", "bi-list");
     }
   });
@@ -173,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", () => {
     cardWidth = getCardWidth();
   });
-  
+
   nextBtn.addEventListener("click", slideNext);
   prevBtn.addEventListener("click", slidePrev);
 
