@@ -11569,6 +11569,20 @@ a {
   border-radius: 50%;
   display: inline-block;
 }
+.features__card__status.pending {
+  background-color: rgba(255, 159, 67, 0.1);
+  color: #ff9f43;
+}
+.features__card__status.pending .features__card__status__indicator {
+  background-color: #ff9f43;
+}
+.features__card__status.scheduled {
+  background-color: rgba(108, 117, 125, 0.1);
+  color: #6c757d;
+}
+.features__card__status.scheduled .features__card__status__indicator {
+  background-color: #6c757d;
+}
 .features__additional__card {
   background-color: #131825;
   border-radius: 14px;
@@ -11618,6 +11632,14 @@ a {
 }
 .features__additional__card__active i {
   font-size: 14px;
+}
+.features__additional__card__active.pending {
+  background-color: rgba(255, 159, 67, 0.1);
+  color: #ff9f43;
+}
+.features__additional__card__active.planned {
+  background-color: rgba(108, 117, 125, 0.1);
+  color: #6c757d;
 }
 
 .altFeatures {

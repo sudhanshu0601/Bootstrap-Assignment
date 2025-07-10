@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleButton = document.querySelector(".my__toggle");
   const navbar = document.querySelector(".my__navbar");
 
-  // Toggle navbar on button click
   toggleButton.addEventListener("click", () => {
     navbar.classList.toggle("show");
     toggleButton.classList.toggle("show");
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Close navbar when any link inside is clicked
   navbar.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       navbar.classList.remove("show");
@@ -24,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Close navbar when clicking outside
   document.addEventListener("click", (event) => {
     const isClickInsideNavbar = navbar.contains(event.target);
     const isClickOnToggle = toggleButton.contains(event.target);

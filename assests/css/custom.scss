@@ -872,6 +872,24 @@ a {
         display: inline-block;
       }
     }
+
+    &__status.pending {
+      background-color: rgba(255, 159, 67, 0.1);
+      color: #ff9f43;
+
+      .features__card__status__indicator {
+        background-color: #ff9f43;
+      }
+    }
+
+    &__status.scheduled {
+      background-color: rgba(108, 117, 125, 0.1);
+      color: #6c757d;
+
+      .features__card__status__indicator {
+        background-color: #6c757d;
+      }
+    }
   }
 
   &__additional__card {
@@ -928,6 +946,16 @@ a {
       i {
         font-size: 14px;
       }
+    }
+
+    &__active.pending {
+      background-color: rgba(255, 159, 67, 0.1);
+      color: #ff9f43;
+    }
+
+    &__active.planned {
+      background-color: rgba(108, 117, 125, 0.1);
+      color: #6c757d;
     }
   }
 }
@@ -1376,11 +1404,11 @@ a {
             transform: scale(1.08);
           }
 
-          .portfolio__content__info{
+          .portfolio__content__info {
             transform: translateY(0);
             opacity: 1;
 
-            a:hover{
+            a:hover {
               background-color: $accent-color;
               transform: translateY(-3px);
             }
