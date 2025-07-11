@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  navbar.querySelectorAll("a").forEach((link) => {
+  navbar.querySelectorAll("ul > li:not(.dropdown) > a").forEach((link) => {
     link.addEventListener("click", () => {
       navbar.classList.remove("show");
       toggleButton.classList.remove("show");
